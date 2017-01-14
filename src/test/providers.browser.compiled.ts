@@ -1,6 +1,6 @@
-import {SOME_TOKEN} from '.c:/Users/malke/WebstormProjects/ts-compiler-test/src/test/interface-providers';
-import {Test1Browser} from '.c:/Users/malke/WebstormProjects/ts-compiler-test/src/test/test1';
-import {Test2Browser} from '.c:/Users/malke/WebstormProjects/ts-compiler-test/src/test/test2';
+import {SOME_TOKEN} from './interface-providers';
+import {Test1Browser} from './test1';
+import {Test2Browser} from './test2';
 
 const TOKENS = [
   {provide: SOME_TOKEN, useClass: Test1Browser, deps: [], multi: true},

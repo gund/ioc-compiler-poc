@@ -6,11 +6,13 @@ import {
   getPropertyDeclaration,
   ImportNotation,
   isNodeOfKind,
+  normalizeDelimiters,
   renderImports,
   renderImportsAndProviders,
   renderProviders,
   stripStringExpressionName
 } from './util';
+import { parse } from 'path';
 import * as ts from 'typescript';
 
 const isNodePropertyAssignment = isNodeOfKind(ts.SyntaxKind.PropertyAssignment);
@@ -20,7 +22,8 @@ export const COMPILED_POSTFIX = 'compiled';
 export function compileFiles(files: string[]): boolean {
   return files.every(file => {
     try {
-      const path = file.substr(0, file.lastIndexOf('/')).replace(/\\/g, '/');
+      file = normalizeDelimiters(file);
+      const path = normalizeDelimiters(parse(file).dir);
       console.log('Compiling file ' + file);
       compileFile(file, path);
       console.log('OK');

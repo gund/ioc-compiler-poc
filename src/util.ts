@@ -147,3 +147,7 @@ export function getExportedVarOfType(stmts: ts.NodeArray<ts.Statement>, type: st
 
   return vars.shift() as ts.VariableStatement;
 }
+
+export function normalizeDelimiters(path: string): string {
+  return path.replace(/\\/g, '/');
+}
