@@ -2,6 +2,15 @@
 
 > POC of IoC compiler for Angular DI providers
 
+## How to run
+
+1. `$ npm install`
+1. `$ npm run compile`
+
+See _/src/test_ folder at _*.compiled.ts* files
+
+## About
+
 Angular application is platform independent,
 meaning that we can target multiple platforms
 with one codebase.
@@ -42,5 +51,5 @@ to locate those providers at compile time.
 So we need a way to precomile this to the normal list of
 Angular providers so that NGC can use it normally.
 
-Please have a look into _/test_ folder where you can find
+Please have a look into _/src/test_ folder where you can find
 what excatly happening at compilation time.
