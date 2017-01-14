@@ -1,7 +1,9 @@
 import { compileFiles } from './compiler';
 
 const done = compileFiles([
-  __dirname + '/test/test-program.ts'
+  __dirname + '/test/providers.browser.ts',
+  __dirname + '/test/providers.web-worker.ts',
+  __dirname + '/test/providers.mobile.ts',
 ]);
 
 if (done) {

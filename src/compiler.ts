@@ -36,7 +36,7 @@ export function compileFile(fileName: string, path: string): void {
   const checker = program.getTypeChecker();
   const sourceFile = program.getSourceFile(fileName);
 
-  const varStmt = getExportedVarOfType(sourceFile.statements, 'TestInterface');
+  const varStmt = getExportedVarOfType(sourceFile.statements, 'ProviderTokens');
 
   const declarations = varStmt.declarationList.declarations;
 
