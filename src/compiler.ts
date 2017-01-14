@@ -15,6 +15,8 @@ import * as ts from 'typescript';
 
 const isNodePropertyAssignment = isNodeOfKind(ts.SyntaxKind.PropertyAssignment);
 
+export const COMPILED_POSTFIX = 'compiled';
+
 export function compileFiles(files: string[]): boolean {
   return files.every(file => {
     try {
@@ -89,7 +91,7 @@ export function compileFile(fileName: string, path: string): void {
     providers.map(p => p.providerStr), name.getText(), varType);
   const importsStr = renderImports(imports);
 
-  const newFile = fileName.replace('.ts', '.compiled.ts');
+  const newFile = fileName.replace('.ts', `.${COMPILED_POSTFIX}.ts`);
 
   renderImportsAndProviders(newFile, importsStr, providersStr);
 }
