@@ -1,0 +1,17 @@
+{
+  "name": "ts-compiler-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.0",
+    "ts-node": "^2.0.0",
+    "typescript": "2.0.10"
+  }
+}
