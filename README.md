@@ -7,7 +7,7 @@
 1. `$ npm install`
 1. `$ npm run compile`
 
-See _/src/test_ folder at _*.compiled.ts* files
+See _/src/test_ folder at _*.compiled.ts_ files
 
 ## About
 
