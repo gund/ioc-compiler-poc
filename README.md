@@ -28,17 +28,17 @@ for each of the platform.
 
 And you have to provide all tokens your application
 require for each platform to work properly. But you can
-eaily make a mistake or even forget to provide on or few
+easily make a mistake or even forget to provide one or few
 tokens for some platform and you will only know about
 it when you actually run the app on that platform and see
 it crashes.
 
 Wouldn't that be great to see this kind of errors ahead
 of time, because you already know which tokens your app
-needs.
+needs?
 
 That is where this compiler comes into the game - 
-it allows you to coumple token with exact interface
+it allows you to couple token with exact interface
 which particular implementation should implement and
 gives you static analisys (thanks to Typescript) if
 something is missing or implementation does not satisfy
@@ -49,7 +49,7 @@ and it works fine with JIT compilation strategy of Angular
 but it fails with AOT - because Angular compiler is unable
 to locate those providers at compile time.
 So we need a way to precomile this to the normal list of
-Angular providers so that NGC can use it normally.
+Angular providers so that NGC can use it as usual.
 
 Please have a look into _/src/test_ folder where you can find
 what excatly happening at compilation time.
